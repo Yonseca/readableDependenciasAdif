@@ -1,18 +1,34 @@
-import geopandas as gpd
 import requests
-import geojson
-# from pyproj import CRS
-# from owslib.wfs import WebFeatureService
 
-url = "https://ideadif.adif.es/gservices/Tramificacion/wfs?request=GetCapabilities"
-params = dict(
-    service="WFS",
-    version="2.0.0",
-    request="GetCapabilities",
-    outputFormat="json",
-)
+# Using the looooooong URL so it does not convert ":" into "%-like" format
+url = "https://ideadif.adif.es/gservices/Tramificacion/wfs?request=GetFeature&service=WFS&version=2.0.0&typename=Tramificacion:Dependencias"
 
-r = requests.get(url, params=params)
+def main():
+    output_formats = ["text/csv", "json", "kml"]
+    for output_format in output_formats:
+        get_file_as(output_format)
 
-# Create GeoDataFrame from geojson and set coordinate reference system
-data = gpd.GeoDataFrame.from_features(geojson.loads(r.content), crs="EPSG:3067")
+def get_file_as(output):
+    full_url = url + "&outputFormat=" + output
+    print("URL: " + full_url)
+
+    r = requests.get(full_url)
+    output_filename = "files/DependenciasAdif" + get_extension(output)
+    with open(output_filename, "w") as file:
+        print("Generating " + output_filename)
+        for lines in r.text:
+            file.write(lines)
+
+def get_extension(output):
+    match output:
+        case "text/csv":
+            return ".csv"
+        case "json":
+            return ".json"
+        case "kml":
+            return ".kml"
+        case _:
+            return ""
+
+if __name__ == "__main__":
+    main()
