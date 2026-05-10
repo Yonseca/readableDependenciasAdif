@@ -8,16 +8,16 @@ En la carpeta [files](https://github.com/Yonseca/readableDependenciasAdif/tree/m
 Como quieras. Recuerda mencionar la autoría de Adif. 
 
 # ¿Quién es el autor de los datos?
-© Administrador de infraestructuras ferroviarias
+© Administrador de infraestructuras ferroviarias  
 (Adif, dicho en corto)
 
 # ¿Hay que citar a alguien si hago uso de los datos?
 Según la web de donde salen los datos, sí. Añade un «© Administrador de infraestructuras ferroviarias» en algún sitio que se vea y úsalos como mejor te venga.
 
 # ¿Cómo uso el script?
-No hace falta: el resultado son los tres ficheros de la carpeta [files](https://github.com/Yonseca/readableDependenciasAdif/tree/main/files). Si aún así quieres meterle mano o lo queires ejecutar porque crees que hay datos más recientes, puedes:
+No hace falta: el resultado son los tres ficheros de la carpeta [files](https://github.com/Yonseca/readableDependenciasAdif/tree/main/files). Si aún así quieres meterle mano o lo quieres ejecutar porque hay o crees que hay datos más recientes, puedes:
 1. Clonar el repositorio:  
-        `git clone git@github.com:Yonseca/readableDependenciasAdif.git`
+        `git clone git@github.com:Yonseca/filesForDependenciasAdif.git`
 2. Entrar a la carpeta del proyecto y descarga las dependencias:  
         `pip install -r requirements.txt`
 3. Ejecutar el script  
