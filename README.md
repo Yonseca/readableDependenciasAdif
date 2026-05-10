@@ -1,5 +1,5 @@
 # ¿Qué es esto?
-Este repositorio contiene un pequeño script en pyton que extrae los datos existentes de las dependencias de Adif en formato CSV, JSON y KML. Estos datos se proporcionan en el conjunto de datos "Tramificación común de ADIF", disponible [aquí](https://ideadif.adif.es/catalog/srv/spa/catalog.search#/metadata/28323796-c2ed-4bb2-bb85-4b6e93ea3334).
+Este repositorio contiene un pequeño script en python que extrae los datos existentes de las dependencias de Adif en formato CSV, JSON y KML. Estos datos se proporcionan en el conjunto de datos "Tramificación común de ADIF", disponible [aquí](https://ideadif.adif.es/catalog/srv/spa/catalog.search#/metadata/28323796-c2ed-4bb2-bb85-4b6e93ea3334).
 
 # ¿Dónde están los ficheros?
 En la carpeta [files](https://github.com/Yonseca/readableDependenciasAdif/tree/main/files), en este mismo respositorio.
